@@ -1,0 +1,15 @@
+current directory: /Users/shivam/CrowdFire/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+/Users/shivam/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20160813-67326-v3bup0.rb extconf.rb
+creating Makefile
+
+current directory: /Users/shivam/CrowdFire/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/shivam/CrowdFire/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/shivam/CrowdFire/vendor/bundle/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20160813-67326-g276lt

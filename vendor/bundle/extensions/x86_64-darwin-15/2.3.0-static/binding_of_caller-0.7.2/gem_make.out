@@ -1,0 +1,16 @@
+current directory: /Users/shivam/CrowdFire/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+/Users/shivam/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20160813-67326-1lzn1sy.rb extconf.rb
+
+current directory: /Users/shivam/CrowdFire/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/shivam/CrowdFire/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/shivam/CrowdFire/vendor/bundle/gems/binding_of_caller-0.7.2/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.
