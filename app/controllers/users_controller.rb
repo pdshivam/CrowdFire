@@ -53,15 +53,20 @@ class UsersController < ApplicationController
 	def populate_day_time_hash
 		@day_hash = {}
 		@time_hash = {}
-		@user_followers.each do |follower|
-		    tweet_latest_status = follower.status
-		    if tweet_latest_status.present?
-		       tweet_posted_date = tweet_latest_status.created_at.to_s.split[0]
-		       tweet_posted_time = tweet_latest_status.created_at.to_s.split[1]
-		       populate_day_hash(tweet_posted_date)
-		       populate_time_hash(tweet_posted_time)
-		    end
-        end
+		begin
+		    @user_followers.each do |follower|
+		        tweet_latest_status = follower.status
+		        if tweet_latest_status.present?
+		           tweet_posted_date = tweet_latest_status.created_at.to_s.split[0]
+		           tweet_posted_time = tweet_latest_status.created_at.to_s.split[1]
+		           populate_day_hash(tweet_posted_date)
+		           populate_time_hash(tweet_posted_time)
+		        end
+            end
+		rescue Exception => e
+		 	@best_time_to_tweet = e.message.to_s
+		 	return
+		end
         best_day_to_tweet = largest_hash_key(@day_hash)
         best_time_to_tweet = largest_hash_key(@time_hash)
         @best_time_to_tweet =  'Best Day to tweet is ' + best_day_to_tweet[0].to_s + ' and Best Time to tweet is  between ' + best_time_to_tweet[0].to_s + '00 hours and ' + ((best_time_to_tweet[0].to_i + 1)%24).to_s + '00 hours'
