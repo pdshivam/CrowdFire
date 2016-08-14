@@ -1,0 +1,15 @@
+<!-- <form>
+  Enter User Name and User Id of your twitter account: <br>
+  User Name:<br>
+  <input type="text" name="firstname"><br>
+  User Id:<br>
+  <input type="text" name="lastname">
+</form> -->
+
+Enter your Twitter Credentials
+
+  User Name: <%= text_field :user, :username %>
+  User Id: <%= text_field :user, :userid %>
+  <%= form_for @user do |f| %>
+  <%= f.submit %>
+  <% end %>
