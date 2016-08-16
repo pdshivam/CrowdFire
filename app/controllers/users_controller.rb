@@ -13,6 +13,8 @@ class UsersController < ApplicationController
 		redirect_to new_user_path
 	end
 
+	private
+
 
 
 	def set_twitter_default
